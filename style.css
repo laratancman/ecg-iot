@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #F6ECE3;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #333;
+}
+
+/* ===== HEADER ===== */
+
+header {
+  background-color: #680307;
+  color: white;
+  padding: 15px 30px;
+  overflow: visible;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  animation: heartbeat 0.8s ease-in-out;
+}
+
+/* ===== BOTÕES DE IDIOMA ===== */
+
+.lang-buttons {
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.lang-buttons button {
+  background: #680307;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.lang-buttons button:hover {
+  background: #8a0a10;
+}
+
+/* ===== CONTEÚDO ===== */
+
+section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+}
+
+section h2 {
+  margin-top: 0;
+  color: #680307;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: #680307;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.sub-header {
+  background: #ffffff;
+  border-bottom: 2px solid #680307;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 12px 0;
+}
+
+.sub-header a {
+  text-decoration: none;
+  color: #680307;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.sub-header a:hover {
+  color: #8a0a10;
+  border-bottom: 2px solid #680307;
+  padding-bottom: 4px;
+}
+
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.1); }
+  40%  { transform: scale(1); }
+  60%  { transform: scale(1.15); }
+  80%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}

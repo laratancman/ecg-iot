@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>ECG Portátil com IoT</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <img src="logo.png" alt="Logo do projeto" class="logo">
+
+    <div class="lang-buttons">
+      <button onclick="setLanguage('pt')">🇧🇷</button>
+      <button onclick="setLanguage('en')">🇺🇸</button>
+      <button onclick="setLanguage('es')">🇪🇸</button>
+    </div>
+  </div>
+</header>
+
+<nav class="sub-header">
+  <a href="#sobre">O Projeto</a>
+  <a href="#tecnologia">Tecnologia</a>
+  <a href="#publico">Para Quem</a>
+  <a href="#historia">Desenvolvimento</a>
+</nav>
+
+<section>
+  <h2 id="about-title">📌 Sobre o Projeto</h2>
+  <p id="about-text">
+    Este projeto desenvolve um sistema portátil de monitoramento cardíaco
+    baseado no ESP32 e no sensor MAX30100, permitindo o acompanhamento remoto
+    de pacientes via internet.
+  </p>
+</section>
+
+<section>
+  <h2 id="how-title">⚙️ Como Funciona</h2>
+  <p id="how-text">
+    O MAX30100 coleta os sinais cardíacos e de oxigenação do sangue.
+    O ESP32 processa essas informações e as transmite via Wi-Fi
+    para uma plataforma na nuvem, onde podem ser visualizadas por um profissional de saúde.
+  </p>
+</section>
+
+<section>
+  <h2 id="arch-title">🌐 Arquitetura IoT</h2>
+  <p class="fluxo" id="arch-text">
+    Paciente → MAX30100 → ESP32 → Internet → Médico
+  </p>
+</section>
+
+<section>
+  <h2 id="contact-title">📬 Contato</h2>
+  <p id="contact-text">Email: seuemail@exemplo.com</p>
+</section>
+
+<footer>
+  <p id="footer-text">© 2026 – ECG Portátil com IoT. Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

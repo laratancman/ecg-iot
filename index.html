@@ -68,7 +68,7 @@
   </div>
 
   <!-- VERSÕES -->
-  <h3 class="versions-title">Versões do ECG</h3>
+  <h2 class="versions-title">Versões do ECG</h2>
 
   <div class="versions-container">
 
@@ -99,12 +99,39 @@
 </section>
 
 <section id="tecnologia">
-  <h2 id="how-title">⚙️ Como Funciona</h2>
-  <p id="how-text">
-    O MAX30100 coleta os sinais cardíacos e de oxigenação do sangue.
-    O ESP32 processa essas informações e as transmite via Wi-Fi
-    para uma plataforma na nuvem, onde podem ser visualizadas por um profissional de saúde.
-  </p>
+  <h2 id="how-title">⚙️ Tecnologia</h2>
+
+  <div class="tech-grid">
+
+    <!-- COLUNA TEXTO -->
+    <div class="tech-text with-left-divider">
+      <h3>ECG 1.0</h3>
+      <p>
+        O ECG 1.0 é um protótipo baseado no sensor MAX30100 e no microcontrolador Arduino Nano,
+        com filtragem digital e detecção de picos R para análise dos batimentos cardíacos.
+      </p>
+      <p>
+        Ele permite identificar taquicardia, bradicardia e arritmias simples com boa precisão
+        para uso doméstico.
+      </p>
+      <h3>💰 Custo estimado: R$120</h3>
+      <p> 
+        Alimentação via <strong>USB</strong> e não possui conexão com aplicativo.
+      </p>
+    </div>
+
+    <!-- COLUNA VÍDEO -->
+    <div class="tech-video">
+      <video 
+        src="ecgv.1.mp4"
+        autoplay
+        loop
+        muted
+        playsinline>
+      </video>
+    </div>
+
+  </div>
 </section>
 
 <section id="publico">

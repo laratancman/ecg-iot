@@ -4,7 +4,7 @@ const translations = {
     subtitle: "Monitoramento cardíaco remoto utilizando ESP32 e IoT",
     aboutTitle: "O Projeto: ECG de Baixo Custo Utilizando IoT",
     aboutText: "O projeto ECG tem como objetivo desenvolver um eletrocardiograma portátil e acessível, ideal para uso domiciliar, utilizando tecnologia baseada em Internet das Coisas (IoT). A iniciativa foi criada para superar barreiras no acesso a exames cardíacos, especialmente em populações de baixa renda, pessoas com mobilidade reduzida ou que enfrentam dificuldades de deslocamento até centros de saúde.\n\nEste sistema combina eletrônica de baixo custo com conectividade sem fio, permitindo que dados cardíacos sejam coletados continuamente e compartilhados de forma segura com profissionais de saúde, facilitando o monitoramento remoto da atividade elétrica do coração e a detecção precoce de possíveis irregularidades.",
-    howTitle: "⚙️ Como Funciona",
+    howTitle: "Tecnologia: Como é feito o ECG?",
     howText: "O MAX30100 coleta os sinais cardíacos e o ESP32 envia os dados via Wi-Fi.",
     archTitle: "🌐 Arquitetura IoT",
     archText: "Paciente → MAX30100 → ESP32 → Internet → Médico",

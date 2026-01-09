@@ -3,7 +3,7 @@ body {
   padding: 0;
   background: #F6ECE3;
   font-family: 'Montserrat', Arial, sans-serif;
-  color: #333;
+  color: #680307;
 }
 
 /* ===== HEADER ===== */
@@ -231,3 +231,99 @@ footer p {
   width: 100%;
   margin-top: 20px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.versions-title {
+  margin-top: 50px;
+  text-align: center;
+  color: #680307;          /* bordô oficial do site */
+  font-weight: 700;
+}
+
+section h2 {
+  color: #680307;
+  font-weight: 700;
+}
+
+section h3 {
+  color: #680307;
+  font-weight: 700;
+}
+
+/* ===== TECNOLOGIA (ECG 1.0 layout) ===== */
+
+#tecnologia {
+  margin-top: 60px;
+}
+
+.tech-grid {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tech-text {
+  flex: 1.1;
+}
+
+.tech-text h3 {
+  color: #680307;
+  font-size: 1.9rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.tech-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.tech-video {
+  flex: 1;
+  background: radial-gradient(circle at center, #8a0a10, #3b0204);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 25px 60px rgba(104, 3, 7, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-video video {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* ===== DIVISOR BORDÔ À ESQUERDA DO TEXTO ===== */
+
+.with-left-divider {
+  position: relative;
+  padding-left: 40px;
+}
+
+.with-left-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #8a0a10,
+    #680307,
+    #8a0a10
+  );
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(104, 3, 7, 0.7);
+}
+

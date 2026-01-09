@@ -12,7 +12,6 @@ header {
   background-color: #680307;
   color: white;
   padding: 15px 30px;
-  overflow: visible;
 }
 
 .header-content {
@@ -21,6 +20,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
@@ -34,12 +39,18 @@ header {
   animation: heartbeat 0.8s ease-in-out;
 }
 
+.brand-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 3px;
+}
+
 /* ===== BOTÕES DE IDIOMA ===== */
 
 .lang-buttons {
   display: flex;
   gap: 10px;
-  z-index: 10;
 }
 
 .lang-buttons button {
@@ -56,36 +67,7 @@ header {
   background: #8a0a10;
 }
 
-/* ===== CONTEÚDO ===== */
-
-section {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-}
-
-section h2 {
-  margin-top: 0;
-  color: #680307;
-}
-
-/* ===== FOOTER ===== */
-
-footer {
-  background: #680307;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 60px;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
+/* ===== SUBHEADER ===== */
 
 .sub-header {
   background: #ffffff;
@@ -110,6 +92,121 @@ footer p {
   padding-bottom: 4px;
 }
 
+/* ===== SECTIONS ===== */
+
+section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+}
+
+section h2 {
+  margin-top: 0;
+  color: #680307;
+}
+
+/* ===== ABOUT ===== */
+
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* ===== VIDEO + ECG ===== */
+
+.about-video {
+  flex: 1.2;                 /* maior que o texto */
+  min-width: 420px;
+  height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.about-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Camada do vídeo */
+.video-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+}
+
+.video-layer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 18px;
+}
+
+/* Camada do ECG */
+.ecg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ecg-layer svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Traço ECG */
+.ecg-layer polyline {
+  fill: none;
+  stroke: #680307;
+  stroke-width: 4;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: ecg 2s linear infinite;
+}
+
+/* Aparece no hover */
+.about-video:hover .ecg-layer {
+  opacity: 0.25;
+}
+
+/* Animação ECG */
+@keyframes ecg {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  background: #680307;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ===== LOGO ANIMATION ===== */
+
 @keyframes heartbeat {
   0%   { transform: scale(1); }
   20%  { transform: scale(1.1); }
@@ -117,4 +214,20 @@ footer p {
   60%  { transform: scale(1.15); }
   80%  { transform: scale(1); }
   100% { transform: scale(1); }
+}
+
+.ecg-3d-container {
+  background: radial-gradient(circle at center, #8a0a10, #3b0204);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 25px 60px rgba(104, 3, 7, 0.8);
+  margin-top: 20px;
+}
+
+.versions-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dois lados iguais */
+  gap: 40px;
+  width: 100%;
+  margin-top: 20px;
 }

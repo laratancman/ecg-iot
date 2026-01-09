@@ -16,7 +16,7 @@
 <header>
   <div class="header-content">
     <div class="brand">
-      <img src="logo.png" alt="Logo do projeto" class="logo">
+      <img src="imgs/logo.png" alt="Logo do projeto" class="logo">
       <span class="brand-name">ECG</span>
     </div>
 
@@ -35,11 +35,12 @@
   <a href="#historia">Desenvolvimento</a>
 </nav>
 
+<!-- ================= SOBRE ================= -->
+
 <section id="sobre">
 
   <h2 id="about-title">O Projeto: ECG de Baixo Custo Utilizando IoT</h2>
 
-  <!-- TEXTO + VÍDEO -->
   <div class="about-container">
 
     <div class="about-text">
@@ -52,8 +53,7 @@
         <br><br>
         Este sistema combina eletrônica de baixo custo com conectividade sem fio,
         permitindo que dados cardíacos sejam coletados continuamente e compartilhados
-        de forma segura com profissionais de saúde, facilitando o monitoramento remoto
-        da atividade elétrica do coração e a detecção precoce de possíveis irregularidades.
+        de forma segura com profissionais de saúde.
       </p>
     </div>
 
@@ -67,7 +67,6 @@
 
   </div>
 
-  <!-- VERSÕES -->
   <h2 class="versions-title">Versões do ECG</h2>
 
   <div class="versions-container">
@@ -76,7 +75,7 @@
       <h4>ECG 1.0</h4>
       <div class="ecg-3d-container">
         <model-viewer 
-          src="ecg1.glb"
+          src="models/ecg1.glb"
           alt="ECG 1.0"
           auto-rotate
           camera-controls
@@ -98,32 +97,29 @@
 
 </section>
 
+<!-- ================= TECNOLOGIA ================= -->
+
 <section id="tecnologia">
   <h2 id="how-title">⚙️ Tecnologia</h2>
 
   <div class="tech-grid">
 
-    <!-- COLUNA TEXTO -->
     <div class="tech-text with-left-divider">
       <h3>ECG 1.0</h3>
       <p>
         O ECG 1.0 é um protótipo baseado no sensor MAX30100 e no microcontrolador Arduino Nano,
-        com filtragem digital e detecção de picos R para análise dos batimentos cardíacos.
+        com filtragem digital e detecção de picos R.
       </p>
       <p>
-        Ele permite identificar taquicardia, bradicardia e arritmias simples com boa precisão
-        para uso doméstico.
+        Identifica taquicardia, bradicardia e arritmias simples para uso doméstico.
       </p>
       <h3>💰 Custo estimado: R$120</h3>
-      <p> 
-        Alimentação via <strong>USB</strong> e não possui conexão com aplicativo.
-      </p>
+      <p>Alimentação via <strong>USB</strong>, sem aplicativo.</p>
     </div>
 
-    <!-- COLUNA VÍDEO -->
     <div class="tech-video">
       <video 
-        src="ecgv.1.mp4"
+        src="videos/ecgv.1.mp4"
         autoplay
         loop
         muted
@@ -134,31 +130,59 @@
   </div>
 </section>
 
+<!-- ================= PUBLICO ================= -->
+
 <section id="publico">
   <h2>👥 Para Quem</h2>
   <p>
-    Este sistema é voltado para pacientes que necessitam de monitoramento cardíaco contínuo,
-    profissionais de saúde que acompanham remotamente seus pacientes
-    e instituições que desejam soluções de baixo custo para telemedicina.
+    Para pacientes, profissionais de saúde e instituições que buscam monitoramento cardíaco
+    remoto e acessível.
   </p>
 </section>
+
+<!-- ================= HISTORIA ================= -->
 
 <section id="historia">
   <h2>🛠 Desenvolvimento</h2>
-  <p>
-    O projeto foi desenvolvido utilizando microcontroladores ESP32,
-    sensores biomédicos e plataformas de IoT, passando por etapas de prototipagem,
-    testes e validação para garantir confiabilidade e precisão nos dados coletados.
-  </p>
-</section>
 
-<section>
-  <h2 id="contact-title">📬 Contato</h2>
-  <p id="contact-text">Email: seuemail@exemplo.com</p>
+  <p class="history-text">
+    O ECG nasceu como um projeto de Iniciação Científica, idealizado pelos professores
+    Marcio Schoenfelder e Diego Carlos de Aguiar, e desenvolvido pelas alunas
+    Lara Tancman e Heloíse Kisner.
+  </p>
+
+  <div class="team-row">
+
+    <div class="team-member">
+      <img src="imgs/lara.jpeg" alt="Lara Tancman">
+      <p>Lara Tancman</p>
+      <span>Desenvolvimento de Sistemas</span>
+    </div>
+
+    <div class="team-member">
+      <img src="imgs/helo.jpeg" alt="Heloíse Kisner">
+      <p>Heloíse Kisner</p>
+      <span>Desenvolvimento de Sistemas</span>
+    </div>
+
+    <div class="team-member">
+      <img src="imgs/marcio.jpeg" alt="Marcio Schoenfelder">
+      <p>Marcio Schoenfelder</p>
+      <span>Professor • Desenvolvimento de Sistemas</span>
+    </div>
+
+    <div class="team-member">
+      <img src="imgs/diego.jpeg" alt="Diego Carlos de Aguiar">
+      <p>Diego Carlos de Aguiar</p>
+      <span>Professor • Eletrônica</span>
+    </div>
+
+  </div>
+
 </section>
 
 <footer>
-  <p id="footer-text">© 2026 – ECG Portátil com IoT. Todos os direitos reservados.</p>
+  <p>© 2026 – ECG Portátil com IoT. Todos os direitos reservados.</p>
 </footer>
 
 <script src="script.js"></script>

@@ -5,10 +5,15 @@
   <title>ECG Portátil com IoT</title>
 
   <link rel="icon" type="image/png" href="imgs/favicon.png?v=2">
+  
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
 
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 
 <body>
 
@@ -153,37 +158,75 @@
   <div class="team-row">
 
     <div class="team-member">
-      <img src="imgs/lara.jpeg" alt="Lara Tancman">
-      <p>Lara Tancman</p>
-      <span>Desenvolvimento de Sistemas</span>
+    <img src="imgs/lara.jpeg" onclick="openProfile('lara')">
+    <p>Lara Tancman</p>
+    <span>Estudante • ADS</span>
     </div>
 
     <div class="team-member">
-      <img src="imgs/helo.jpeg" alt="Heloíse Kisner">
+      <img src="imgs/helo.jpeg" onclick="openProfile('helo')">
       <p>Heloíse Kisner</p>
-      <span>Desenvolvimento de Sistemas</span>
+      <span>Estudante • Direito</span>
     </div>
 
     <div class="team-member">
-      <img src="imgs/marcio.jpeg" alt="Marcio Schoenfelder">
+      <img src="imgs/marcio.jpeg" onclick="openProfile('marcio')">
       <p>Marcio Schoenfelder</p>
-      <span>Professor • Desenvolvimento de Sistemas</span>
+      <span>Professor • Orientador</span>
     </div>
 
     <div class="team-member">
-      <img src="imgs/diego.jpeg" alt="Diego Carlos de Aguiar">
-      <p>Diego Carlos de Aguiar</p>
-      <span>Professor • Eletrônica</span>
+      <img src="imgs/diego.jpeg" onclick="openProfile('diego')">
+      <p>Diego Aguiar</p>
+      <span>Professor • Co-orientador</span>
     </div>
 
   </div>
 
 </section>
 
+<!-- ===== MODAL PERFIL ===== -->
+<div id="profile-modal" class="profile-modal" onclick="closeProfile()">
+  <div class="profile-card" onclick="event.stopPropagation()">
+
+    <span class="close-modal" onclick="closeProfile()">×</span>
+
+    <div class="profile-grid">
+      
+      <div class="profile-photo">
+        <img id="profile-img" src="" alt="">
+      </div>
+
+      <div class="profile-content">
+        <h2 id="profile-name"></h2>
+        <p class="profile-role" id="profile-role"></p>
+        <p class="profile-bio" id="profile-bio"></p>
+
+          <div class="profile-links">
+            <a id="profile-linkedin" href="#" target="_blank" class="profile-link">
+              <img src="imgs/linkedin.png" alt="LinkedIn">
+              <span>LinkedIn</span>
+            </a>
+
+            <a id="profile-github" href="#" target="_blank" class="profile-link">
+              <img src="imgs/github.png" alt="GitHub">
+              <span>GitHub</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
 <footer>
   <p>© 2026 – ECG Portátil com IoT. Todos os direitos reservados.</p>
 </footer>
 
+<!-- ===== JS REFERENCE ===== -->
 <script src="script.js"></script>
 
 </body>

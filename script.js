@@ -65,4 +65,55 @@ window.setLanguage = function (lang) {
   }
 };
 
+const profiles = {
+  lara: {
+    name: "Lara Tancman",
+    role: "Desenvolvimento de Sistemas",
+    img: "imgs/lara.jpeg",
+    bio: "Graduanda em Análise e Desenvolvimento de Sistemas pela UniSENAI, com formação técnica pelo SESI e certificação em Inteligência Artificial pelo programa Entra21. Possuo conhecimentos em programação, informática intermediária e inglês avançado. Destaca-se pela boa comunicação, trabalho em equipe, organização e busca constante por evolução, com objetivo de crescer e se desenvolver na área de Tecnologia da Informação.",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/"
+  },
+  helo: {
+    name: "Heloíse Kisner",
+    role: "Desenvolvimento de Sistemas",
+    img: "imgs/helo.jpeg",
+    bio: "Atuou no desenvolvimento do software, organização dos dados e validação do funcionamento do ECG.",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/"
+  },
+  marcio: {
+    name: "Marcio Schoenfelder",
+    role: "Professor • Desenvolvimento de Sistemas",
+    img: "imgs/marcio.jpeg",
+    bio: "Analista de Sistemas e Negócios por formação, com mais de 29 anos de atuação em empresa privada na área de desenvolvimento de sistemas.Mais de 45 anos de vivência com programação e desenvolvimento de sistemas.Atuo como professor do Ensino Técnico no SENAI, Ensino Médio na Escola SESI, como Instrutor nos programas ENTRA21 e +DEVS2BLU e como orientador em.projetos de inovação em TI. Pós-graduado em: - Gestão Escolar. - Desenvolvimento de Sistemas em JAVA. - Tecnologia da Informação na Gestão de Negócios.- Gestão de Processos. Certificado SCRUM.",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/"
+  },
+  diego: {
+    name: "Diego Carlos de Aguiar",
+    role: "Professor • Eletrônica",
+    img: "imgs/diego.jpeg",
+    bio: "Sou formado em Análise e desenvolvimento de Sistemas desde 2018 e Sistemas para Internet desde 2016, sou pós graduado em Engenharia Elétrica ,engenharia eletrônica atualmente mestrando em engenharia elétrica com ênfase em eletrônica de potência pela FURB. Sou desenvolvedor de sistemas para IOT, desde a programação, circuitos elétricos, e desenvolvimento de placas para teste. Sou professor de na área de desenvolvimento de sistemas, elétrica e eletrônica já atuei nas unidades do Senai de Brusque ,São João Batista e Tijucas e atualmente no Senai de Blumenau, trabalho como professor na área de engenharia elétrica para a Uniasselvi. Sou extremamente dedicado a tudo que faço, e procuro melhorar e aprender cada vez mais.",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/"
+  }
+};
+
+function openProfile(id) {
+  const p = profiles[id];
+  document.getElementById("profile-img").src = p.img;
+  document.getElementById("profile-name").innerText = p.name;
+  document.getElementById("profile-role").innerText = p.role;
+  document.getElementById("profile-bio").innerText = p.bio;
+  document.getElementById("profile-linkedin").href = p.linkedin;
+  document.getElementById("profile-github").href = p.github;
+  document.getElementById("profile-modal").style.display = "flex";
+}
+
+function closeProfile() {
+  document.getElementById("profile-modal").style.display = "none";
+}
+
+
 setLanguage("pt");
